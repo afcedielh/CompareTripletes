@@ -1,18 +1,4 @@
-﻿using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
-using System.Text;
-using System;
-
-class Result
+﻿class Result
 {
 
     /*
@@ -24,9 +10,9 @@ class Result
      *  2. INTEGER_ARRAY b
      */
 
-    public static List<int> compareTriplets(List<int> a, List<int> b)
+    public static List<int> CompareTriplets(List<int> a, List<int> b)
     {
-        List<int> ret = new List<int>(){
+        List<int> ret = new(){
             0,0
         };
         for (int i = 0; i <= 2; i++)
@@ -41,19 +27,10 @@ class Result
 
 class Solution
 {
-    public static void Main(string[] args)
-    {
-        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        List<int> a = new List<int>() { 5, 6, 7 };
-
-        List<int> b = new List<int>() { 3, 6, 10 };
-
-        List<int> result = Result.compareTriplets(a, b);
-
-        //textWriter.WriteLine(String.Join(" ", result));
-
-        //textWriter.Flush();
-        //textWriter.Close();
+    public static void Main()
+    {       
+        List<int> a = new() { 5, 6, 7 };
+        List<int> b = new() { 3, 6, 10 };
+        _ = Result.CompareTriplets(a, b);
     }
 }
